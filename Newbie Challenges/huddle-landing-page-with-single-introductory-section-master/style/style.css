@@ -1,0 +1,143 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: hsl(257, 40%, 49%);
+  background-image: url(../images/bg-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  margin: 32px 40px;
+}
+
+header {
+  height: auto;
+}
+
+main {
+  display: flex;
+}
+
+main .hero {
+  margin: 20px auto;
+  width: 1920px;
+}
+
+main .hero img {
+  width: 100%;
+}
+
+main .description {
+  padding: 24px;
+  margin: 44px 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+main .description h1 {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  color: white;
+  line-height: 1.7;
+}
+
+main .description p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: white;
+  margin: 20px 0;
+}
+
+main .description button {
+  width: 180px;
+  height: 40px;
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  color: hsl(257, 40%, 49%);
+  box-shadow: 1px 1px 3px black;
+  cursor: pointer;
+}
+
+main .description button:hover {
+  color: white;
+  background-color: hsl(300, 69%, 71%);
+}
+
+footer .social {
+  text-align: right;
+  margin: 30px;
+}
+
+footer .social button {
+  width: 36px;
+  height: 36px;
+  margin-right: 10px;
+  border: none;
+  outline: none;
+  border: 1px solid white;
+  border-radius: 100%;
+  background-color: #ffffff00;
+  color: white;
+  cursor: pointer;
+}
+
+footer .social button:hover {
+  color: hsl(300, 69%, 71%);
+  border: 1px solid hsl(300, 69%, 71%);
+}
+
+@media (max-width: 1032px) {
+  main .description {
+    margin-right: 0;
+    padding: 8px;
+  }
+
+  main .description h1 {
+    font-size: 24px;
+    line-height: 1.4;
+  }
+  main .description p {
+    line-height: 1.2;
+    font-size: 14px;
+  }
+  main .description button {
+    width: 140px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 800px) {
+  main {
+    flex-direction: column;
+  }
+
+  main .hero {
+    width: 100%;
+  }
+
+  main .description {
+    margin: 0;
+    text-align: center;
+    align-items: center;
+  }
+
+  main .description p {
+    width: 70%;
+  }
+
+  main .description button {
+    width: 50%;
+    height: 40px;
+  }
+
+  footer .social {
+    text-align: center;
+    margin: 20px auto;
+  }
+}
