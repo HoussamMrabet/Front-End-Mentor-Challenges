@@ -1,0 +1,54 @@
+.header{
+
+    nav{
+        position: relative;
+    }
+
+    &__logo{
+
+        img{
+            
+            width: 5.125rem;
+            height: 1.5625rem;
+
+            @include breakpoint-up(large){
+                width: 5.75rem;
+                height: 1,8125rem;        
+            }
+ 
+        }
+
+    }
+
+    &__links{
+        
+        a{
+
+            font-size: 0.875rem;
+            font-family: 'Raleway', sans-serif;
+            color: $gray;
+
+            &:not(:last-child){
+                margin-right: 1.75rem;
+            }
+
+            @include breakpoint-up(large){
+
+                font-size: 0.7rem;
+
+                &:not(:last-child){
+                    margin-right: 1.75rem;
+                }
+    
+            }
+
+            &:hover{
+                color: $blue;
+                transition: color 250ms ease-in-out;
+            }
+
+        }
+
+    }
+
+}

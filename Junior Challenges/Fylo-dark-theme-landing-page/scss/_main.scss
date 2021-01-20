@@ -1,0 +1,63 @@
+.main{
+
+    text-align: center;
+
+    background: url('/dist/images/bg-curvy-desktop.svg') bottom no-repeat;
+    background-size: 100% 190px;
+    @include breakpoint-down(medium){
+        background: url('/dist/images/bg-curvy-mobile.svg') bottom no-repeat;
+        background-size: 200% 350px;
+    }
+
+    &__slider{
+
+        
+        img{
+            
+            width: 19rem;
+            height: 14.125rem;
+
+            @include breakpoint-up(large){
+                width: 22.625rem;
+                height: 16.8125rem;
+            }
+
+        }
+    }
+
+    &__text{
+            
+        width: 20.5rem;
+        margin: auto;
+
+        @include breakpoint-up(large){
+            width: 24rem;
+        }
+
+        h1{
+        
+            font-size: $font-xl;
+    
+            @include breakpoint-up(large){
+                font-size: $font-lg;
+            }
+        }
+    
+        p{
+            font-size: 1rem;
+            @include breakpoint-up(large){
+                font-size: 0.75rem;
+            }
+        }
+    
+        a{
+            color: $white;
+            font-size: 0.75rem;
+            @include breakpoint-up(large){
+                font-size: 0.5rem;
+            }
+        }
+
+    }
+
+}

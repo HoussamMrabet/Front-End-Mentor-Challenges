@@ -1,0 +1,83 @@
+.info{
+
+    background-color: $mainDarkBlue;
+
+    .container--pall{
+        padding-top: 5rem;
+        padding-bottom: 1.5625rem;
+        padding-right: 4.25rem;
+        padding-left: 4.25rem;
+
+        @include breakpoint-up(large){
+            padding-top: 2.3125rem;
+            padding-bottom: 2.3125rem;
+            padding-right: 20rem;
+            padding-left: 20rem;
+        }
+    }
+
+    &__grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    
+        @include breakpoint-up(medium){
+            grid-template-columns: repeat(2, 1fr);
+        }    
+    }
+
+
+    &__hero{
+
+        img{
+            width: 20rem;
+            height: 17.5rem;
+        }
+
+    }
+
+    &__text{
+
+        @include breakpoint-up(medium){
+            padding-top: 3.9375rem;
+            width: 19.375rem;
+            height: 14.6875rem;
+        }
+
+        h1{
+            font-size: 1.1875rem;
+
+            @include breakpoint-up(medium){
+                font-size: 1.25rem;
+                width: 10.5rem;           
+            }
+        }
+
+        p{
+            font-size: 1rem;
+
+            @include breakpoint-up(medium){
+                font-size: 0.6875rem;
+                width: 24rem;           
+            }
+            margin-bottom: 0.6875rem;
+        }
+
+        a{
+            font-size: 1rem;
+            color: $cyan;
+            padding-bottom: 0.2rem;
+            border-bottom: 1px solid $cyan;
+
+            @include breakpoint-up(medium){
+                font-size: 0.6875rem;           
+            }
+
+            img{
+                vertical-align: middle;
+            }
+        }
+
+    }
+
+}

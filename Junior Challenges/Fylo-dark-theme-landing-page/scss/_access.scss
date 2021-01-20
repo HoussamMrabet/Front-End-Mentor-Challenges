@@ -1,0 +1,58 @@
+.access{
+
+    background-color: $mainDarkBlue;
+    text-align: center;
+
+    &__box{
+        position: relative;
+        top: 12rem;
+        display: inline-block;
+        background-color: $testiDarkBlue;
+        height: auto;
+        padding: 2rem 3rem;
+        width: 25rem;
+
+        @include breakpoint-up(medium){
+            top: 9rem;
+            width: 50rem;
+        }
+    }
+    
+    &__text{
+        h1{
+            margin: 0;
+            margin-bottom: 2rem;
+        }
+
+        p{
+            margin: 0;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__input{
+        input{
+            outline: none;
+            border: none;
+            display: inline-block;
+            margin-right: 1rem;
+            padding-left: 2rem;
+            height: 3.5rem;
+            width: 19rem;
+            border-radius: 50px;
+            margin-bottom: 1rem;
+
+            @include breakpoint-up(large){
+                margin-right: 1rem;
+                padding-left: 2rem;
+                height: 2.5rem;
+                width: 20rem;
+            }
+        }
+
+        .button{
+            width: 19rem;
+        }
+    }
+
+}

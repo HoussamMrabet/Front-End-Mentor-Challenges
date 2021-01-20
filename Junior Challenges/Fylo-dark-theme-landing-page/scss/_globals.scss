@@ -1,0 +1,154 @@
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*, *::after, *::before{
+    box-sizing: inherit;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: $font-sm;
+    font-weight: 400;
+    background-color: $testiDarkBlue;
+    color: $white;
+}
+
+// Text
+
+a, a:visited, a:hover{
+    text-decoration: none;  
+    color: $white;
+}
+
+h1{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+
+p{
+    color: $gray;
+}
+
+// Flexbox
+
+.flex{
+    display: flex;
+
+    &-jc-sb{
+        justify-content: space-between;
+    }
+
+    &-jc-c{
+        justify-content: center;
+    }
+
+    &-ai-c{
+        align-items: center;
+    }
+}
+
+// Spacing
+.container{
+    margin: 0 auto;
+
+    &--pall{
+        padding-top: 1.5625rem;
+        padding-bottom: 1.5625rem;
+        padding-right: 2.25rem;
+        padding-left: 2.25rem;
+
+        @include breakpoint-up(large){
+            padding-top: 2.3125rem;
+            padding-bottom: 2.3125rem;
+            padding-right: 2.5rem;
+            padding-left: 2.5rem;
+        }
+
+    }
+
+    &--py{
+        padding-top: 1.5625rem;
+        padding-bottom: 1.5625rem;
+
+        @include breakpoint-up(large){
+            padding-top: 2.3125rem;
+            padding-bottom: 2.3125rem;
+        }
+
+    }
+
+    &--px{
+        padding-right: 2.5rem;
+        padding-left: 2.5rem;
+
+        @include breakpoint-up(large){
+            padding-right: 11.875rem;
+            padding-left: 11.875rem;
+        }
+
+    }
+
+    &--pt{
+        padding-top: 1.5625rem;
+
+        @include breakpoint-up(large){
+            padding-top: 2.3125rem;
+        }
+
+    }
+
+    &--pb{
+        padding-bottom: 1.5625rem;
+
+        @include breakpoint-up(large){
+            padding-bottom: 2.3125rem;
+        }
+
+    }
+
+    &--pr{
+        padding-right: 2.25rem;
+
+        @include breakpoint-up(large){
+            padding-right: 2.5rem;
+        }
+
+    }
+
+    &--pl{
+        padding-left: 2.25rem;
+
+        @include breakpoint-up(large){
+            padding-left: 2.5rem;
+        }
+
+    }
+
+}
+
+// Buttons
+.button{
+    display: inline-block;
+    padding: 1.1875rem 5.125rem;
+    background: linear-gradient(to right, $cyan, $blue);
+    border: 0;
+    border-radius: 50px;
+    cursor: pointer;
+    color: $white;
+    font-weight: 400;
+    font-size: $font-sm;
+    transition: opacity 300ms ease-in-out;
+
+    @include breakpoint-up(large){
+        padding: 0.6875rem 3rem;
+    }
+
+    &:hover{
+        opacity: 0.75;
+    }
+
+}

@@ -1,0 +1,76 @@
+.services{
+    background-color: $mainDarkBlue;
+    text-align: center;
+
+    .container--pall{
+        padding-top: 1.5625rem;
+        padding-bottom: 1.5625rem;
+        padding-right: 4.25rem;
+        padding-left: 4.25rem;
+
+        @include breakpoint-up(large){
+            padding-top: 2.3125rem;
+            padding-bottom: 2.3125rem;
+            padding-right: 20rem;
+            padding-left: 20rem;
+        }
+    }
+
+}
+
+.service{
+
+    &__grid{
+
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 5rem;
+
+        @include breakpoint-up(medium){
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+    }
+
+    &__item{
+
+        width: 20rem;
+        margin: auto;
+
+        @include breakpoint-up(medium){
+            width: 15.75rem;
+        }
+
+
+
+    }
+
+    &__icon{
+        img{
+            height: 2.875rem;
+        }
+    }
+
+    &__text{
+        h1{
+
+            font-size: 1.25rem;
+    
+            @include breakpoint-up(medium){
+                font-size: 0.75rem;
+            }
+        }
+    
+        p{
+    
+            font-size: 1rem;
+    
+            @include breakpoint-up(medium){
+                font-size: 0.5625rem;
+            }
+        }
+    }
+
+
+
+}
