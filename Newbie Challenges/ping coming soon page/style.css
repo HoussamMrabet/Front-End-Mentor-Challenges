@@ -39,11 +39,27 @@ img.logo {
   color: hsl(209, 33%, 12%);
 }
 
-form {
+.form {
   margin: 1.5rem 0;
 }
 
-form input[type="text"] {
+.form .provid {
+  position: relative;
+}
+
+.form .provid span {
+  position: absolute;
+  left: 10%;
+  top: 220%;
+  font-size: 0.7rem;
+  color: hsl(354, 100%, 66%);
+}
+
+.active {
+  display: none;
+}
+
+.form input[type="text"] {
   width: 26.5rem;
   height: 3.5rem;
   padding: 1.25rem 2rem;
@@ -53,11 +69,12 @@ form input[type="text"] {
   border-radius: 50px;
 }
 
-form input[type="submit"] {
+.form input[type="submit"] {
   width: 12.5rem;
   height: 3.5rem;
   border: none;
   outline: none;
+  border: 1px solid hsl(223, 87%, 63%);
   border-radius: 50px;
   background-color: hsl(223, 87%, 63%);
   box-shadow: 1px 5px 5px hsl(223, 100%, 88%);
@@ -66,7 +83,7 @@ form input[type="submit"] {
   font-weight: 600;
 }
 
-form input[type="submit"]:hover {
+.form input[type="submit"]:hover {
   background-color: hsla(223, 87%, 63%, 0.9);
 }
 
@@ -77,17 +94,27 @@ img.dashboard {
 }
 
 .footer .social a {
-  display: inline;
   text-decoration: none;
+}
+
+.footer .social a:nth-child(2) {
+  margin: 0 0.5rem;
+}
+
+.footer .social a button {
+  display: inline;
   font-size: 1rem;
   color: hsl(223, 87%, 63%);
+  background-color: white;
   width: 2rem;
   height: 2rem;
   padding: 0.5rem;
   border: 1px solid hsl(223, 100%, 88%);
   border-radius: 100%;
+  outline: none;
+  cursor: pointer;
 }
-.footer .social a:hover {
+.footer .social a button:hover {
   color: white;
   background-color: hsl(223, 87%, 63%);
 }
@@ -96,4 +123,40 @@ img.dashboard {
   color: hsl(0, 0%, 59%);
   font-weight: 300;
   margin: 1.625rem 0;
+}
+
+@media (max-width: 375px) {
+  .form {
+    margin: 2rem 0;
+  }
+
+  .form input[type="text"] {
+    width: 20rem;
+    height: 3rem;
+    padding: 1rem 2.5rem;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .form .provid span {
+    position: relative;
+    margin-bottom: 1rem;
+    top: 0;
+    left: 0;
+    font-size: 0.7rem;
+    color: hsl(354, 100%, 66%);
+  }
+
+  .form input[type="submit"] {
+    display: block;
+    width: 20rem;
+    height: 3rem;
+    margin: 1rem auto;
+  }
+
+  img.dashboard {
+    width: 80%;
+    height: auto;
+    margin: 0 0 4.25rem 0;
+  }
 }

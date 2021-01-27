@@ -15,6 +15,7 @@
   <style>
     .attribution { font-size: 11px; text-align: center; color: hsl(0, 0%, 59%);}
     .attribution a { color:hsl(209, 33%, 12%);text-decoration: none; }
+    .attribution a:hover { color: hsl(223, 87%, 63%);}
   </style>
 </head>
 <body>
@@ -31,19 +32,22 @@
       </p>  
     </div>
   
-    <form>
-      <input type="text" placeholder="Your email address...">
+    <div class="form">
+      <span class="provid">
+        <input type="text" placeholder="Your email address...">
+        <span class="active"><i>Please provide a valid email adress</i></span>
+      </span>
       <input type="submit" value="Notify Me">
-    </form>
+    </div>
 
     <img class="dashboard" src="images/illustration-dashboard.png" alt="dashboard">
 
   
     <div class="footer">
       <div class="social">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><button><i class="fab fa-facebook-f"></i></button></a>
+        <a href="#"><button><i class="fab fa-twitter"></i></button></a>
+        <a href="#"><button><i class="fab fa-instagram"></i></button></a>
       </div>
       <h6>
           &copy; Copyright Ping. All rights reserved.
@@ -58,5 +62,7 @@
     </footer>
   
   </div>
+
+  <script src="form.js"></script>
 </body>
 </html>
