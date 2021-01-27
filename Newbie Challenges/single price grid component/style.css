@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1440px;
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  background-color: hsl(204, 43%, 93%);
+}
+
+.box {
+  width: 40rem;
+  margin: 10.25rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "box1 box1"
+    "box2 box3";
+  border-radius: 10px;
+  box-shadow: 0 0 50px hsl(204, 43%, 93%);
+}
+
+.box .box1 {
+  background-color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 2.875rem;
+  grid-area: box1;
+}
+
+.box .box1 h2 {
+  color: hsl(179, 62%, 43%);
+  margin-bottom: 2rem;
+}
+
+.box .box1 h3 {
+  color: hsl(71, 73%, 54%);
+  margin-bottom: 1rem;
+}
+
+.box .box1 p {
+  color: hsl(218, 22%, 67%);
+  line-height: 1.7;
+}
+
+.box .box2 {
+  background-color: hsl(179, 62%, 43%);
+  border-bottom-left-radius: 10px;
+  padding: 2.75rem;
+  grid-area: box2;
+}
+
+.box .box2 h3 {
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.box .box2 p:nth-child(2) {
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.box .box2 p:nth-child(2) span {
+  color: hsl(204, 43%, 93%);
+  font-size: 1rem;
+  font-weight: 400;
+  vertical-align: 40%;
+}
+
+.box .box2 p:nth-child(3) {
+  color: hsl(204, 43%, 93%);
+  margin-bottom: 2rem;
+}
+
+.box .box2 button {
+  width: 15rem;
+  height: 3.25rem;
+  font-weight: 700;
+  color: white;
+  background-color: hsl(71, 73%, 54%);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 0px 1px hsl(204, 43%, 93%);
+}
+
+.box .box3 {
+  background-color: #4abebd;
+  border-bottom-right-radius: 10px;
+  padding: 2.75rem;
+  grid-area: box3;
+}
+
+.box .box3 h3 {
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.box .box3 p {
+  color: hsl(204, 43%, 93%);
+  line-height: 1.4;
+}
+
+@media (max-width: 700px) {
+  .box {
+    width: 19.5rem;
+    margin: 4.5rem auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "box1"
+      "box2"
+      "box3";
+  }
+  .box .box2 {
+    border-bottom-left-radius: 0;
+  }
+  .box .box3 {
+    border-bottom-left-radius: 10px;
+  }
+}
